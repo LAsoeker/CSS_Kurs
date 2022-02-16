@@ -14,18 +14,12 @@ body {
   position: relative;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .main-header {
   background-color: #f7f7f7;
   /* padding: 20px;
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
   /* height: 80px; */
 }
 
@@ -40,22 +34,18 @@ nav {
   display: block;
 }
 
-article {
-  margin-bottom: 60px;
-}
-
 .post-header {
   margin-bottom: 40px;
   /* position: relative; */
 }
 
-aside {
+/* aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   padding: 50px 40px;
   width: 300px;
-}
+} */
 
 /* SMALLER ELEMENTS */
 h1,
@@ -200,10 +190,6 @@ h1::first-letter {
   margin-right: 5px;
 }
 
-h3 + p::first-line {
-  /* color: red; */
-}
-
 h2 {
   /* background-color: orange; */
   position: relative;
@@ -281,9 +267,37 @@ nav p {
   font-size: 15px;
   font-style: italic;
 }
-
-.content-container {
+/* only for flexbox */
+/* .content-container {
   display: flex;
   align-items: flex-start;
   gap: 75px;
+} */
+
+/* GRID */
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 50px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1/-1;
+}
+
+footer{
+  grid-column: 1/-1;
+}
+
+aside{
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 40px;
+  width: 300px;
+
 }

@@ -14,7 +14,6 @@
       }
       .el--3 {
         background-color: green;
-        /* height: 150px; */
       }
       .el--4 {
         background-color: goldenrod;
@@ -42,36 +41,53 @@
         height: 300px;
 
         display: grid;
-        grid-template-columns:  repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 10px 30px;
+        
+        grid-template-columns:  repeat(4, 1fr);     
+        /* 3rows */
+        /* grid-template-columns:  repeat(3, 1fr); */
+        /* 2rows */
+        /* grid-template-columns:  repeat(2, 1fr);  */
+        gap: 10px;
 
+        /* .el--8 {
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+        .el--6{
+        grid-column-end: span 2;
+        }
+        .el--2{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        } */
         /* TEMP */
         display: none;
       }
 
-      .el {
-
-      }
+      
 
       .container--2 {
         /* STARTER */
         font-family: sans-serif;
-        background-color: black;
         font-size: 40px;
         margin: 100px;
 
-        width: 1000px;
+        width: 800px;
         height: 600px;
 
         /* CSS GRID */
         display: grid;
         grid-template-columns: 150px 200px 200px;
-        grid-template-rows: 250px 150px;
-
+        grid-template-rows: 200px 200px;
         /* Aligning trakcs inside container:
         distribute empty space */
-        justify-content: center;
+        justify-content: end;
+        align-content: center;
+        gap: 50px;
+
+        /* Aligning items INSIDE cells: moving items around inside cell */
+        justify-items: center;
+        align-items: center; 
       }
     </style>
   </head>
@@ -83,7 +99,7 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <!-- <div class="el el--7">(7) to</div> -->
+      <div class="el el--7">(7) to</div>
       <div class="el el--8">(8) learn</div>
     </div>
 

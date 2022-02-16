@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel component</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="component-heading">Carousel</h1>
+    <div class="carousel">
+      <img src="maria.jpg" class="carousel-pic" alt="Maria de Alemeida" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          ipsum sequi, saepe repellat doloremque accusamus minus sint deleniti
+          ?"
+        </p>
+        <p class="testimonial-author">Maria de Alemeida</p>
+        <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="carousel-btn carousel-btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="carousel-btn-icon"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <button class="carousel-btn carousel-btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="carousel-btn-icon"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+    <a href="index.html">HOME</a>
+  </body>
+</html>
