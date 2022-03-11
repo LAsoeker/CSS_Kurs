@@ -1,9 +1,12 @@
-'use strict';
+"use strict";
 
-const newBtn = document.querySelector('.btn');
-console.log("hello");
-newBtn.addEventListener("click", clicked);
+document.querySelector(".btn--big").addEventListener("click", (e) => {
+  console.log("CLICKED");
+  document.querySelector(".btn--big").classList.toggle(".btn--big--press");
+});
 
-function clicked(){
+console.log(document.querySelector(".btn"));
+
+function clicked() {
   console.log("Button wurde geclickt");
 }

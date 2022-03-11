@@ -22,9 +22,9 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  border-bottom: 8px solid #054C37;
+  border-bottom: 8px solid #054c37;
   color: #343a40;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -51,11 +51,11 @@ h2 {
 }
 
 .btn:link,
-.btn:visited{
+.btn:visited {
   border-radius: 5px;
   margin: 1px 1px;
   color: white;
-  background-color: #054C37;
+  background-color: #054c37;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
@@ -69,6 +69,13 @@ h2 {
   box-shadow: 0 10px 10px 0 rgba(5, 76, 55, 0.358);
 }
 
+.btn--big:active {
+  margin: 1px 1px;
+  font-size: 16px;
+  padding: 16px 32px;
+  box-shadow: 0 5px 10px 0 rgba(5, 76, 55, 0.6);
+}
+
 .btn--small:hover {
   margin: 0;
   font-size: 15px;
@@ -76,7 +83,7 @@ h2 {
   box-shadow: 0 5px 5px 0 rgba(5, 76, 55, 0.358);
 }
 
-.btn--big{
+.btn--big {
   font-size: 16px;
   padding: 16px 32px;
 }
@@ -126,7 +133,7 @@ img {
 
 /* FEATURES */
 .features-icon {
-  stroke: #054C37;
+  stroke: #054c37;
   width: 32px;
   height: 32px;
   margin-bottom: 24px;
@@ -145,7 +152,7 @@ img {
 /* TESTIMONIAL */
 .testimonial-section {
   color: #fff;
-  background-color: #054C37;
+  background-color: #054c37;
   padding: 16px;
   border-radius: 5px;
 }
@@ -161,7 +168,7 @@ img {
 }
 
 .testimonial-text {
-  color: #E2FDF5;
+  color: #e2fdf5;
   font-size: 16px;
   line-height: 1.7;
   font-style: italic;
@@ -206,7 +213,7 @@ h3 {
 }
 
 .chair-icon {
-  stroke: #054C37;
+  stroke: #054c37;
   width: 24px;
   height: 24px;
 }
