@@ -11,6 +11,7 @@ Headline: A healthy meal delivered to your door, every single day
 Brand color: #e67e22
 
 ## Omnifood Website Content
+-> herosection
 
 ### Summary
 
@@ -126,3 +127,17 @@ Careers
 Recipe directory
 Help center
 Privacy & terms
+
+#########
+
+## Sections
+
+- Navigation + Logo
+- Hero section
+- Featured in 
+- how it works
+- Meals, diets
+- Gallery + Testimonials
+- Pricing + Features
+- Call to action
+- footer
