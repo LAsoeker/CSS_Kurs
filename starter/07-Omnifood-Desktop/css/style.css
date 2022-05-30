@@ -22,6 +22,7 @@ Greys #555,
 
 ####03 SHADOWS
 
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075)
 
 ####04 BORDER RADIUS
 
@@ -37,8 +38,14 @@ SPACING SYSTEM (px)
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem hsla(28, 74%, 47%, 0.5);
+}
+
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -46,6 +53,11 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #444;
+  overflow-x: hidden;
+}
+
+strong {
+  font-weight: 600;
 }
 
 /****************************/
@@ -74,6 +86,9 @@ body {
 .cols-4 {
   grid-template-columns: repeat(4, 1fr);
 }
+.cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
 .rows-2 {
   grid-template-rows: repeat(2, 1fr);
 }
@@ -82,6 +97,22 @@ body {
 }
 .rows-4 {
   grid-template-rows: repeat(4, 1fr);
+}
+
+.justfy-self-end {
+  justify-self: end;
+}
+
+.mb-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.mb-big {
+  margin-bottom: 9.8rem !important;
+}
+
+.txt-center {
+  text-align: center;
 }
 
 .heading-primary,
@@ -99,7 +130,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   margin-bottom: 9.6rem;
 }
 
@@ -118,6 +149,13 @@ body {
   letter-spacing: 0.75px;
 }
 
+.footer-heading {
+  margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -125,6 +163,9 @@ body {
   padding: 1.6rem 3.2rem;
   text-decoration: none;
   border-radius: 50px;
+
+  border: none;
+  cursor: pointer;
 
   transition: all 0.3s;
 }
@@ -153,13 +194,37 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.small {
+  display: none !important;
+}
+
+.big {
+  display: inline-block !important;
+}
+
 /****************************/
 /* NAVIGATION */
 /****************************/
 
 .main-nav-list {
   display: flex;
-  gap: 2.4rem;
+  gap: 4.4rem;
   align-items: center;
   list-style: none;
 }
@@ -168,6 +233,8 @@ body {
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
+  border-radius: 150px;
+  padding: 1.2rem 2.4rem;
   color: #333;
   font-weight: 500;
   font-size: 1.8rem;
@@ -182,14 +249,30 @@ body {
 .nav-cta:link,
 .nav-cta:visited {
   background-color: #e67e22;
-  padding: 1.2rem 2.4rem;
-  border-radius: 150px;
+
   color: #fff;
 }
 
 .nav-cta:hover,
 .nav-cta:active {
   background-color: #cf711f;
+}
+
+.nav-burger {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  color: #333;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
 }
 
 /****************************/
@@ -203,6 +286,12 @@ body {
   height: 9.6rem;
   padding: 0 4.8rem;
   background-color: #fdf2e9;
+  position: relative;
+}
+
+.header > a {
+  border-radius: 150px;
+  padding: 1.2rem 2.4rem;
 }
 
 .logo {
@@ -354,4 +443,459 @@ body {
   height: 3.2rem;
   filter: brightness(0);
   opacity: 0.5;
+}
+
+/****************************/
+/* MEALS SECTION */
+/****************************/
+
+.meals-section {
+  padding: 9.6rem 0;
+  background-color: #fae5d3;
+}
+
+.meal-card {
+  border-radius: 12px;
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal-card:hover {
+  transform: translate(0, -1.2rem);
+}
+
+.meal-card-details {
+  padding: 2.4rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.meal-card-details > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-card img {
+  max-width: 100%;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #cf711f;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #222;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegi,
+.tag--vegan {
+  background-color: #51cf66;
+}
+
+.tag--paleo {
+  background-color: rgb(255, 208, 0);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.list-item ion-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #e67e22;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/****************************/
+/* TESTIMONIALS SECTION */
+/****************************/
+
+.testimonials-section {
+  gap: 0;
+  grid-template-columns: 60fr 40fr;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.testimonials-container {
+  padding: 9.6rem 8.4rem 9.6rem 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4.8rem;
+}
+
+.testimonial > img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial > blockquote {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial > span {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.testimonials-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.2rem;
+  padding: 1.2rem;
+}
+
+.testimonials-gallery > figure > img {
+  display: block;
+  max-width: 100%;
+  transition: all 0.4s;
+}
+
+.testimonials-gallery > figure > img:hover {
+  scale: 1.1;
+}
+
+.testimonials-gallery > figure {
+  overflow: hidden;
+}
+
+/****************************/
+/* PRICING SECTION */
+/****************************/
+
+.pricing-section {
+  padding: 9.6rem 0;
+  background-color: #fff;
+}
+
+.pricing-card {
+  border-radius: 12px;
+  background-color: #fae5d3;
+  padding: 3.2rem;
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card:first-of-type {
+  background-color: #fff;
+  padding: 2.8rem;
+  border: 2px solid #fae5d3;
+}
+
+.pricing-card:nth-of-type(2)::before {
+  content: "Best value";
+  text-transform: uppercase;
+  position: absolute;
+  top: 27px;
+  right: -50px;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.75;
+  background-color: rgb(255, 39, 39);
+  color: #fff;
+  padding: 0.8rem 6rem;
+  transform: rotate(45deg);
+}
+
+.pricing-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.price > span {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.pricing-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.pricing-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.price-feat > ion-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  padding: 1.2rem;
+  margin-bottom: 3.2rem;
+  background-color: #fae5d3;
+  border-radius: 50%;
+}
+
+.feat-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  color: #222;
+}
+
+.feat-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.pricing-aside {
+  font-size: 1.8rem;
+}
+
+/****************************/
+/* PRICING SECTION */
+/****************************/
+
+.cta-section {
+  padding: 9.6rem 0;
+  background-color: #fff;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background: linear-gradient(
+    135deg,
+    rgba(207, 107, 20, 1) 0%,
+    rgba(230, 111, 5, 1) 49%,
+    rgba(247, 183, 127, 1) 100%
+  );
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* .cta-section > .container {
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    rgba(207, 107, 20, 1) 0%,
+    rgba(230, 111, 5, 1) 49%,
+    rgba(247, 183, 127, 1) 100%
+  );
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+} */
+
+.cta-text-box {
+  color: #3a2009;
+  padding: 6.4rem;
+}
+
+.cta-text-box > h2 {
+  color: #3a2009;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 3.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      135deg,
+      rgba(207, 107, 20, 0.3) 0%,
+      rgba(230, 110, 5, 0.3) 49%,
+      rgba(247, 183, 127, 0.3) 100%
+    ),
+    url("../content/img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.cta-form label {
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-family: inherit;
+  background-color: #fae5d3;
+  color: inherit;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.cta-form input::placeholder {
+  color: #666;
+}
+
+.cta-form button {
+  border-radius: 8px;
+  color: inherit;
+  background-color: #3a2009;
+  color: #fae5d3;
+  align-self: end;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.cta-form button:hover {
+  background-color: #fae5d3;
+  color: #3a2009;
+}
+
+.cta-section *:focus {
+  box-shadow: 0 0 0 0.8rem hsla(28, 73%, 13%, 0.5);
+}
+
+/****************************/
+/* FOOTER */
+/****************************/
+
+.footer {
+  padding: 9.6rem 0;
+  border-top: 1px solid #eee;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-col .logo {
+  margin-bottom: 1.6rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-links ion-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  margin-top: auto;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #767676;
+}
+
+.footer a:link,
+.footer a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+
+  transition: all 0.3s;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: #444;
+}
+
+.footer-grid {
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+}
+
+.footer address > p:first-of-type {
+  margin-bottom: 2.4rem;
 }
