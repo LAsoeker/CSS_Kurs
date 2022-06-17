@@ -46,6 +46,7 @@ SPACING SYSTEM (px)
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -288,6 +289,29 @@ strong {
   background-color: #fdf2e9;
   position: relative;
 }
+
+/****************************/
+/* STICKY NAVIGATION */
+/****************************/
+
+.sticky .header {
+  height: 6.4rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.06);
+  z-index: 2;
+}
+
+.sticky .hero {
+  margin-top: 6.4rem;
+}
+
+/****************************/
+/* HEADER */
+/****************************/
 
 .header > a {
   border-radius: 150px;
